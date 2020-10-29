@@ -130,7 +130,23 @@ def cube(given_num):
 
 #Question17
 def sum_of_series(size):
-    pass
+    sum = 0
+    start = 2
+    for i in range(size):
+        print(start)
+        sum += start
+        start = start * 10 + 2
+    print(sum)
+
+
+
+#Question18
+def asterisk(rows):
+    for i in range(1, rows+1):
+        print(i*"* ")
+    for i in range(rows - 1, 0, -1):
+        print(i*"* ")
+
 
 
 if __name__ == "__main__":
@@ -176,6 +192,11 @@ if __name__ == "__main__":
         elif case == 16:
             number = int(input("Input your number:\t"))
             cube(number)
+        elif case == 17:
+            sum_of_series(5)
+        elif case == 18:
+            num = int(input("Input number of rows:\t"))
+            asterisk(num)
         elif case == 0:
             break
         else:
