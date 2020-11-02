@@ -49,6 +49,31 @@ def adding_item():
     print(list1)
 
 
+#Queston8
+def list_extend():
+    list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
+    sublist = ["h", "i", "j"]
+    list1[2][1][2].extend(sublist)
+    print(list1)
+
+
+#Question9
+def find_and_replace():
+    list1 = [5, 10, 15, 20, 25, 50, 20]
+    index = list1.index(20)
+    list1[index] = 200
+    print(list1)
+
+
+#Question10
+def remove_value():
+    list1 = [5, 20, 15, 20, 25, 50, 20]
+    for i in list1:
+        if i == 20:
+            list1.remove(i)
+    return list1
+
+
 if __name__ == "__main__":
     while True:
         case = int(input("\nEnter the number of question which you want to run 1/2/3/.../10, 0 to QUIT\t"))
@@ -66,12 +91,12 @@ if __name__ == "__main__":
             remove_empty_strings()
         elif case == 7:
             adding_item()
-        # elif case == 8:
-        #
-        # elif case == 9:
-        #
-        # elif case == 10:
-        #
+        elif case == 8:
+            list_extend()
+        elif case == 9:
+            find_and_replace()
+        elif case == 10:
+            print(remove_value())
         elif case == 0:
             break
         else:
