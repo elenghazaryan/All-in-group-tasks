@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     #my local apps
     'register_app',
+    'languages_app',
 ]
 
 MIDDLEWARE = [
